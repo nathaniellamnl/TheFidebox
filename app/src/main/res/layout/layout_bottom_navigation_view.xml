@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_height="@dimen/btm_nav_height"
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom"
+            app:labelVisibilityMode="unlabeled"
+            app:itemIconSize="@dimen/btm_nav_icon_size"
+            app:menu="@menu/bottom_navigation"
+            app:itemIconTint="@color/color_selector"
+            app:layout_behavior=".ScrollingBehaviour.BottomViewScrollingBehaviour"
+            />
+
+
+   <!--
+
+       app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+
+   <RelativeLayout
+
+   app:itemIconTint="@color/color_selector"
+   android:background="@color/colorboxgray"
+
+        android:layout_alignParentBottom="true"
+        android:layout_height="@dimen/btm_nav_height"
+        android:layout_width="match_parent"
+        android:elevation="20dp"
+        android:background="?android:attr/windowBackground"
+        >  -->
+</merge>

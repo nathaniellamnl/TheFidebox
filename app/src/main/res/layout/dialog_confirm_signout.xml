@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:padding="10dp"
+    android:layout_height="wrap_content"
+    android:layout_width="350dp"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView
+        android:id="@+id/tv_delete"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        android:gravity="center"
+            android:textSize="21sp"
+            android:text="@string/dialog_signout"/>
+
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+
+        <TextView
+            android:id="@+id/dialogCancel"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="15sp"
+            android:text="@string/Cancel"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:id="@+id/dialogConfirm"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="15sp"
+            android:text="@string/Sign_out"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="30dp"/>
+
+    </RelativeLayout>
+</LinearLayout>

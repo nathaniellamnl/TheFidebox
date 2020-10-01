@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "742451895092",
+    "firebase_url": "https://fidemail-8a128.firebaseio.com",
+    "project_id": "fidemail-8a128",
+    "storage_bucket": "fidemail-8a128.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:742451895092:android:b5ddbe9b557d48f6856361",
+        "android_client_info": {
+          "package_name": "com.thefidebox.fidebox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "742451895092-jubscd0ea1rrl2040hcdmoq9hjo9ceac.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.thefidebox.fidebox",
+            "certificate_hash": "cfb691e8f19be9a908e2bb42f0cacd16f04a5e23"
+          }
+        },
+        {
+          "client_id": "742451895092-5rd1dv7qfno2mmhloghnlfg2cro6jcdo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkaqTiCjnYRnjn7qGoQjyz0U_hX-9b_Tk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "742451895092-5rd1dv7qfno2mmhloghnlfg2cro6jcdo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

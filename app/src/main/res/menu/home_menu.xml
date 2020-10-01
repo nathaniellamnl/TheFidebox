@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <group
+        android:id="@+id/category"
+        android:checkableBehavior="single"
+        >
+        <item
+            android:checkable="true"
+            android:icon="@drawable/ic_football"
+            android:id="@+id/football"
+            android:title="@string/Football" />
+        <item
+            android:checkable="true"
+            android:icon="@drawable/ic_politics"
+            android:id="@+id/politics"
+            android:title="@string/Politics" />
+        <item
+            android:checkable="true"
+            android:icon="@drawable/ic_life"
+            android:id="@+id/life"
+            android:title="@string/Life" />
+        <item
+            android:checkable="true"
+            android:icon="@drawable/ic_heart_circle"
+            android:id="@+id/relationship"
+            android:title="@string/Relationship" />
+    </group>
+
+    <group
+        android:checkableBehavior="single"
+        android:id="@+id/settingsGroup"
+        >
+        <item
+            android:checkable="true"
+            android:icon="@drawable/ic_settings"
+            android:id="@+id/settings"
+            android:title="@string/Settings" />
+    </group>
+
+
+</menu>

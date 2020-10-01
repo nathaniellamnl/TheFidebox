@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+     <!--   <item>@font/bonbon</item>
+        <item>@font/dancing_script</item>
+        <item>@font/hanalei</item>
+        <item>@font/mr_bedfort</item>
+        <item>@font/risque</item>
+
+        <array name="preloaded_fonts" translatable="false">
+        <item>@font/roboto_black_italic</item>
+    </array>
+
+        -->
+    </array>
+
+
+</resources>

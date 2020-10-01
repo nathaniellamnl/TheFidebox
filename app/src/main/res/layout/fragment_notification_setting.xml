@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <include layout="@layout/progress_bar_main" />
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/AppBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height">
+
+            <!--            android:fitsSystemWindows="true"-->
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/write_n_draft_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_backArrow"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/backarrow"
+                        app:srcCompat="@drawable/ic_backarrow" />
+
+                    <TextView
+                        android:id="@+id/tvprofile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/toolbar_to_arrow_margin"
+                        android:layout_marginLeft="@dimen/toolbar_to_arrow_margin"
+                        android:text="@string/Notifications"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/toolbar_font" />
+
+                </RelativeLayout>
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <TextView
+            android:id="@+id/tv_notifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/AppBarLayout"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/Notifications"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/normalsize"
+            android:textStyle="bold" />
+
+
+        <RelativeLayout
+            android:id="@+id/relLayout_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_notifications"
+            android:layout_marginTop="10dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_comment_cv"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="25dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:drawableStart="@drawable/ic_chat_bubble"
+                android:drawableLeft="@drawable/ic_chat_bubble"
+                android:text="@string/giggles_on_or_replies_to_your_cvs"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/toggle_button_1"
+                android:layout_toStartOf="@id/toggle_button_1"
+                android:textSize="17sp"
+                android:textColor="@color/colorBlack" />
+
+            <androidx.appcompat.widget.AppCompatToggleButton
+                android:id="@+id/toggle_button_1"
+                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/toggle_button"
+                android:textOff=""
+                android:textOn="" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/relLayout_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/relLayout_1">
+
+
+            <TextView
+                android:id="@+id/tv_giggle_cv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_toStartOf="@id/toggle_button_2"
+                android:layout_toLeftOf="@+id/toggle_button_2"
+                android:drawableStart="@drawable/ic_smiley_evil"
+                android:drawableLeft="@drawable/ic_smiley_evil"
+                android:drawablePadding="25dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/giggles_on_or_replies_to_your_comments"
+                android:textColor="@color/colorBlack"
+                android:textSize="17sp" />
+
+            <androidx.appcompat.widget.AppCompatToggleButton
+                android:id="@+id/toggle_button_2"
+                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/toggle_button"
+                android:textOff=""
+                android:textOn="" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

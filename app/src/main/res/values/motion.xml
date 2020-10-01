@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+        <!--Motion-->
+
+        <style name="Animation.MyTheme.BottomSheet.Modal" parent="Animation.AppCompat.Dialog">
+            <item name="android:windowEnterAnimation">@animator/bottom_sheet_slide_in</item>
+            <item name="android:windowExitAnimation">@animator/bottom_sheet_slide_out</item>
+        </style>
+
+
+</resources>

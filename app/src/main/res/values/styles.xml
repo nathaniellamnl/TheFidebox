@@ -1,0 +1,166 @@
+<resources xmlns:tools="http://schemas.android.com/tools"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Base application theme.
+
+      <style name="BottomNavigation" parent="Widget.MaterialComponents.BottomNavigationView">
+
+    </style>
+
+     <item name="android:colorBackground"></item>
+        <item name="colorError">
+
+       </item>
+
+ <item name="colorPrimaryVariant">#3d3d3c</item>
+        <item name="colorSecondaryVariant">@color/colorGrey</item>
+        <item name="android:colorBackground">@color/colorGrey</item>
+        <item name="colorSurface">@color/colorGrey</item>
+        <item name="colorError">@color/colorYellow</item>
+
+        <item name="colorOnSecondary">@color/colorBlack</item>
+        <item name="colorOnBackground">@color/colorGrey</item>
+        <item name="colorOnSurface">@color/colorGrey</item>
+        <item name="colorOnError">@color/colorGrey</item>
+                <item name="colorOnBackground">#37474F</item>
+        <item name="android:colorBackground">#37474F</item>
+
+
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+
+  <style name="Widget.Fidebox.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintTextAppearance">@style/TextAppearance.Shrine.TextInputLayout.HintText</item>
+        <item name="hintTextColor">#607D8B</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <style name="TextAppearance.Shrine.TextInputLayout.HintText" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="android:textColor">#</item>
+
+                <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+
+    </style>
+
+        <style name="BottomNavigation" parent="Widget.MaterialComponents.BottomNavigationView"
+        xmlns:tools="http://schemas.android.com/tools">
+    <item name="colorPrimary">@color/colorDkgray</item>
+    <item name="colorSurface">#FFFFFF</item>
+    <item name="colorOnPrimary">#37474F</item>
+
+
+        <item name="" type=""
+
+
+    <style name="AppTheme.Custom" parent="ThemeOverlay.MaterialComponents">
+
+        <item name="">@color/your_color</item>
+        <item name="md_color_content">@color/your_color</item>
+        <item name="md_color_button_text">@color/your/color</item>
+
+    </style>
+
+
+
+</style>
+
+
+
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar"
+        xmlns:tools="http://schemas.android.com/tools">
+
+
+        <item name="colorPrimary">#607D8B</item>
+        <item name="colorPrimaryVariant">#263238</item>
+
+
+        <item name="colorSecondary">#F06292</item>
+        <item name="colorOnSecondary">#F06292</item>
+
+        <item name="colorPrimaryDark">#263238</item>
+    status bar
+    <item name="colorSurface">#FFFFFF</item>
+    <item name="colorOnSurface">#37474F</item>
+    <item name="colorOnPrimary">#37474F</item>
+
+
+
+    <item name="colorOnError">#F06292</item>
+
+    <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.MyApp.SmallComponent</item>
+    <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.MyApp.MediumComponent</item>
+    <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.MyApp.LargeComponent</item>
+
+
+    <item name="scrimBackground">@color/mtrl_scrim_color</item>
+    <item name="textAppearanceHeadline1">@style/TextAppearance.MaterialComponents.Headline1</item>
+    <item name="textAppearanceHeadline2">@style/TextAppearance.MaterialComponents.Headline2</item>
+    <item name="textAppearanceHeadline3">@style/TextAppearance.MaterialComponents.Headline3</item>
+    <item name="textAppearanceHeadline4">@style/TextAppearance.MaterialComponents.Headline4</item>
+    <item name="textAppearanceHeadline5">@style/TextAppearance.MaterialComponents.Headline5</item>
+    <item name="textAppearanceHeadline6">@style/TextAppearance.MaterialComponents.Headline6</item>
+    <item name="textAppearanceSubtitle1">@style/TextAppearance.MaterialComponents.Subtitle1</item>
+    <item name="textAppearanceSubtitle2">@style/TextAppearance.MaterialComponents.Subtitle2</item>
+    <item name="textAppearanceBody1">@style/TextAppearance.MaterialComponents.Body1</item>
+    <item name="textAppearanceBody2">@style/TextAppearance.MaterialComponents.Body2</item>
+    <item name="textAppearanceCaption">@style/TextAppearance.MaterialComponents.Caption</item>
+    <item name="textAppearanceButton">@style/TextAppearance.MaterialComponents.Button</item>
+    <item name="textAppearanceOverline">@style/TextAppearance.MaterialComponents.Overline</item>
+
+</style>
+
+
+    -->
+
+    <!--Components-->
+
+    <!--Bottom Sheets-->
+    <style name="ThemeOverlay.MyTheme.BottomSheetDialog" parent="ThemeOverlay.MaterialComponents.Dialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/Animation.MyTheme.BottomSheet.Modal</item>
+        <item name="android:statusBarColor" tools:ignore="NewApi">@android:color/transparent</item>
+        <item name="bottomSheetStyle">@style/Widget.MyTheme.BottomSheet.Modal</item>
+        <item name="android:navigationBarColor" tools:ignore="NewApi">?colorSurface</item>
+        <item name="android:navigationBarDividerColor" tools:ignore="NewApi">@android:color/transparent</item>
+    </style>
+    <style name="Widget.MyTheme.BottomSheet.Modal" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="shapeAppearanceOverlay">?shapeAppearanceLargeComponent</item>
+    </style>
+
+    <!--Navigation Drawer-->
+    <style name="Widget.MyTheme.NavigationView" parent="Widget.MaterialComponents.NavigationView">
+        <item name="itemTextAppearance">?textAppearanceBody2</item>
+    </style>
+
+    <!--   <item name="bottomSheetDialogTheme">@style/ThemeOverlay.MyTheme.BottomSheetDialog</item>
+        <item name="navigationViewStyle">@style/Widget.MyTheme.NavigationView</item>
+  <item name="alphaEmphasisHigh">@dimen/alpha_emphasis_high</item>
+        <item name="alphaEmphasisMedium">@dimen/alpha_emphasis_medium</item>
+        <item name="alphaEmphasisDisabled">@dimen/alpha_emphasis_disabled</item>
+
+        -->
+<!--
+    <style name="MyDatePicker" parent="android:Widget.Material.DatePicker" tools:ignore="NewApi">
+        <item name="android:datePickerMode">spinner</item>
+    </style>-->
+
+    <style name="ProgressTheme">
+        <item name="colorAccent">#63df39</item>
+        <item name="colorPrimary">#63df39</item>
+        <item name="colorPrimaryDark">#63df39</item>
+    </style>
+
+
+    <style name="Widget.Shrine.Toolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">#FFFFFF</item>
+
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+
+    </style>
+
+    <!-- -->
+
+</resources>

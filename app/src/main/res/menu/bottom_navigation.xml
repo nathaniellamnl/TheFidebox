@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/homebtn"
+        android:icon="@drawable/ic_mail_outline"
+        android:title="">
+    </item>
+
+    <item
+        android:id="@+id/write_n_draftbtn"
+        android:icon="@drawable/ic_write_outline"
+        android:title="">
+    </item>
+
+    <item
+        android:id="@+id/searchbtn"
+        android:icon="@drawable/ic_search_outline"
+        android:title=""/>
+
+    <item
+        android:id="@+id/profilebtn"
+        android:icon="@drawable/ic_person_outline"
+        android:title=""/>
+
+</menu>

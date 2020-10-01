@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relLayout_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/AppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:fitsSystemWindows="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/write_n_draft_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_backArrow"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/backarrow"
+                    app:srcCompat="@drawable/ic_backarrow" />
+
+                <TextView
+                    android:textIsSelectable="false"
+                    android:id="@+id/tvprofile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/toolbar_to_arrow_margin"
+                    android:layout_marginLeft="@dimen/toolbar_to_arrow_margin"
+                    android:layout_toEndOf="@+id/iv_backArrow"
+                    android:layout_toRightOf="@+id/iv_backArrow"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/toolbar_font" />
+
+                <TextView
+                    android:textIsSelectable="false"
+                    android:id="@+id/tv_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/toolbar_to_right_margin"
+                    android:layout_marginRight="@dimen/toolbar_to_right_margin"
+                    android:text="@string/Send"
+                    android:textColor="@color/colorBlack" />
+            </RelativeLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/relLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/AppBarLayout"
+        android:paddingTop="@dimen/vertical_padding"
+        android:paddingBottom="@dimen/vertical_padding">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout_profile_picture"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:padding="2dp">
+
+            <ImageView
+                android:id="@+id/ivProfilePicturePlaceHolder"
+                android:layout_centerHorizontal="true"
+                android:layout_width="115dp"
+                android:layout_height="115dp"
+                android:contentDescription="@string/field_profile_photo"
+                android:padding="10dp"
+                app:srcCompat="@drawable/ic_fail" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/ivProfilePicturePlaceHolder"
+                android:textColor="@color/colorBlack"
+                android:text="@string/Edit"
+                />
+
+        </RelativeLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_category"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/relativeLayout_profile_picture"
+            android:layout_toRightOf="@+id/relativeLayout_profile_picture"
+            android:hint="@string/field_category">
+
+            <AutoCompleteTextView
+                android:id="@+id/filled_exposed_dropdown_category"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:digits=""
+                android:focusable="false"
+                android:imeOptions="actionNext"
+                android:inputType="none"
+                android:lines="1"
+                android:longClickable="false"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_input_category"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/relativeLayout_profile_picture"
+            android:layout_toRightOf="@+id/relativeLayout_profile_picture"
+            android:hint="@string/Name">
+
+            <AutoCompleteTextView
+                android:id="@+id/filled_exposed_dropdown_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:digits=""
+                android:focusable="false"
+                android:imeOptions="actionNext"
+                android:inputType="none"
+                android:lines="1"
+                android:longClickable="false"
+                android:maxWidth="220dp"
+                android:minWidth="180dp"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout_position"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_input_layout_name"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/relativeLayout_profile_picture"
+            android:layout_toRightOf="@+id/relativeLayout_profile_picture"
+            android:hint="@string/Position">
+
+            <AutoCompleteTextView
+                android:id="@+id/filled_exposed_dropdown_position"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:digits=""
+                android:focusable="false"
+                android:imeOptions="actionNext"
+                android:inputType="none"
+                android:lines="1"
+                android:longClickable="false"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:contentDescription="@string/Edit"
+            android:id="@+id/iv_type_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_input_category"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@+id/text_input_layout_name"
+            android:layout_toRightOf="@+id/text_input_layout_name"
+            app:srcCompat="@drawable/ic_pencil" />
+
+
+    </RelativeLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relLayout2">
+
+        <!--        1st failure-->
+        <ImageView
+            android:contentDescription="@string/expand_or_collapse"
+            android:id="@+id/arrow_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/vertical_padding"
+            android:paddingTop="@dimen/vertical_padding"
+            android:paddingRight="@dimen/vertical_padding"
+            android:paddingBottom="@dimen/vertical_padding"
+            app:layout_constraintBottom_toBottomOf="@id/relLayout_failure_1"
+            app:layout_constraintEnd_toStartOf="@id/et_date_1"
+            app:layout_constraintHorizontal_weight="10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0"
+            app:srcCompat="@drawable/ic_arrow_up" />
+
+        <TextView
+            android:textIsSelectable="false"
+            android:id="@+id/et_date_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grey_border_top"
+            android:hint="@string/Date"
+            android:paddingLeft="@dimen/vertical_padding"
+            android:paddingTop="@dimen/vertical_padding"
+            android:paddingRight="@dimen/vertical_padding"
+            android:paddingBottom="@dimen/vertical_padding"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintBottom_toBottomOf="@id/relLayout_failure_1"
+            app:layout_constraintEnd_toStartOf="@id/relLayout_failure_1"
+            app:layout_constraintHorizontal_weight="25"
+            app:layout_constraintStart_toEndOf="@id/arrow_1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0" />
+
+
+        <RelativeLayout
+            android:id="@+id/relLayout_failure_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grey_border_top"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_plus_1"
+            app:layout_constraintHorizontal_weight="65"
+            app:layout_constraintStart_toEndOf="@id/et_date_1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0">
+
+            <TextView
+                android:id="@+id/tv_failure_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:paddingTop="@dimen/vertical_padding"
+                android:paddingBottom="@dimen/vertical_padding"
+                android:text="@string/Failure"
+                android:textColor="@color/colorBlack" />
+
+            <EditText
+                android:id="@+id/et_failure_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_failure_1"
+                android:background="@null"
+                android:hint="@string/Failure"
+                android:paddingBottom="@dimen/vertical_padding" />
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:contentDescription="@string/add_failure_item"
+            android:id="@+id/iv_plus_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintBottom_toBottomOf="@id/relLayout_failure_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="10"
+            app:layout_constraintStart_toEndOf="@id/relLayout_failure_1"
+            app:layout_constraintTop_toTopOf="@id/relLayout_failure_1"
+            app:layout_constraintVertical_bias="0"
+            app:srcCompat="@drawable/ic_add_circle" />
+
+
+        <!--        2nd failure-->
+
+        <ImageView
+            android:contentDescription="@string/expand_or_collapse"
+            android:id="@+id/arrow_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/vertical_padding"
+            android:paddingTop="@dimen/vertical_padding"
+            android:paddingRight="@dimen/vertical_padding"
+            android:paddingBottom="@dimen/vertical_padding"
+            app:layout_constraintBottom_toBottomOf="@id/relLayout_failure_2"
+            app:layout_constraintEnd_toStartOf="@id/et_date_2"
+            app:layout_constraintHorizontal_weight="10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/relLayout_failure_2"
+            app:layout_constraintVertical_bias="0"
+            app:srcCompat="@drawable/ic_arrow_up" />
+
+        <TextView
+            android:textIsSelectable="false"
+            android:id="@+id/et_date_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grey_border_top"
+            android:hint="@string/Date"
+            android:paddingLeft="@dimen/vertical_padding"
+            android:paddingTop="@dimen/vertical_padding"
+            android:paddingRight="@dimen/vertical_padding"
+            android:paddingBottom="@dimen/vertical_padding"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintBottom_toBottomOf="@id/relLayout_failure_2"
+            app:layout_constraintEnd_toStartOf="@id/relLayout_failure_2"
+            app:layout_constraintHorizontal_weight="25"
+            app:layout_constraintStart_toEndOf="@id/arrow_2"
+            app:layout_constraintTop_toTopOf="@id/relLayout_failure_2"
+            app:layout_constraintVertical_bias="0" />
+
+
+        <RelativeLayout
+            android:id="@+id/relLayout_failure_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grey_border_top"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_minus_2"
+            app:layout_constraintHorizontal_weight="65"
+            app:layout_constraintStart_toEndOf="@id/et_date_2"
+            app:layout_constraintTop_toBottomOf="@id/relLayout_failure_1"
+            app:layout_constraintVertical_bias="0">
+
+            <TextView
+                android:id="@+id/tv_failure_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/vertical_padding"
+                android:paddingBottom="@dimen/vertical_padding"
+                android:text="@string/Failure"
+                android:textColor="@color/colorBlack" />
+
+            <EditText
+                android:id="@+id/et_failure_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_failure_2"
+                android:background="@null"
+                android:hint="@string/Failure"
+                android:paddingBottom="@dimen/vertical_padding"
+                />
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:contentDescription="@string/remove_failure_item"
+            android:id="@+id/iv_minus_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            app:layout_constraintBottom_toBottomOf="@id/relLayout_failure_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="10"
+            app:layout_constraintStart_toEndOf="@id/relLayout_failure_2"
+            app:layout_constraintTop_toTopOf="@id/relLayout_failure_2"
+            app:layout_constraintVertical_bias="0"
+            app:srcCompat="@drawable/ic_minus_circle" />
+
+
+        <!--        3rd failure-->
+        <ImageView
+            android:contentDescription="@string/expand_or_collapse"
+            android:id="@+id/arrow_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/vertical_padding"
+            android:paddingTop="@dimen/vertical_padding"
+            android:paddingRight="@dimen/vertical_padding"
+            android:paddingBottom="@dimen/vertical_padding"
+            app:layout_constraintBottom_toBottomOf="@id/relLayout_failure_3"
+            app:layout_constraintEnd_toStartOf="@id/et_date_3"
+            app:layout_constraintHorizontal_weight="10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/relLayout_failure_3"
+            app:layout_constraintVertical_bias="0"
+            app:srcCompat="@drawable/ic_arrow_up" />
+
+
+        <TextView
+            android:textIsSelectable="false"
+            android:id="@+id/et_date_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grey_border_top"
+            android:hint="@string/Date"
+            android:paddingLeft="@dimen/vertical_padding"
+            android:paddingTop="@dimen/vertical_padding"
+            android:paddingRight="@dimen/vertical_padding"
+            android:paddingBottom="@dimen/vertical_padding"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintBottom_toBottomOf="@id/relLayout_failure_3"
+            app:layout_constraintEnd_toStartOf="@id/relLayout_failure_3"
+            app:layout_constraintHorizontal_weight="25"
+            app:layout_constraintStart_toEndOf="@id/arrow_3"
+            app:layout_constraintTop_toTopOf="@id/relLayout_failure_3"
+            app:layout_constraintVertical_bias="0" />
+
+
+        <RelativeLayout
+            android:id="@+id/relLayout_failure_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grey_border_top"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_minus_3"
+            app:layout_constraintHorizontal_weight="65"
+            app:layout_constraintStart_toEndOf="@id/et_date_3"
+            app:layout_constraintTop_toBottomOf="@id/relLayout_failure_2"
+            app:layout_constraintVertical_bias="0">
+
+            <TextView
+                android:id="@+id/tv_failure_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/vertical_padding"
+                android:paddingBottom="@dimen/vertical_padding"
+                android:text="@string/Failure"
+                android:textColor="@color/colorBlack" />
+
+            <EditText
+                android:id="@+id/et_failure_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_failure_3"
+                android:background="@null"
+                android:gravity="top"
+                android:hint="@string/Failure" />
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:contentDescription="@string/remove_failure_item"
+            android:id="@+id/iv_minus_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            app:layout_constraintBottom_toBottomOf="@id/relLayout_failure_3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="10"
+            app:layout_constraintStart_toEndOf="@id/relLayout_failure_3"
+            app:layout_constraintTop_toTopOf="@id/relLayout_failure_3"
+            app:layout_constraintVertical_bias="0"
+            app:srcCompat="@drawable/ic_minus_circle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:progressBarStyleHorizontal"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:indeterminate="false"
+        android:progressDrawable="@drawable/circular_progress_bar"
+        android:background="@drawable/circle_shape"
+        android:max="10000"
+        android:progress="0" />
+
+    <include layout="@layout/progress_bar_main"/>
+
+
+    <TextView
+        android:id="@+id/percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="13dp"
+        android:text="0%"
+        android:visibility="gone"
+        />
+</RelativeLayout>
+

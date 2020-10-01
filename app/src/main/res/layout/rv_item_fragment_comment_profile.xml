@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relLayout_grandparent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/grey_border_top"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <!-- android:background="@drawable/comment_background"
+     android:stateListAnimator="@animator/comment_selection"-->
+
+    <include layout="@layout/progress_bar_main"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayout_parent"
+        >
+
+    <RelativeLayout
+        android:id="@+id/relLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_category"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_football" />
+
+        <TextView
+            android:id="@+id/tv_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_toEndOf="@id/iv_category"
+            android:layout_toRightOf="@id/iv_category"
+            android:text="@string/Life" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_toEndOf="@+id/tv_category"
+            android:layout_toRightOf="@+id/tv_category"
+            android:text="@string/Today"
+            android:textColor="@color/colorGrey" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_comment_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relLayout1"
+        android:text="I dunno what went wrong. But you better go see a shrink"
+
+        android:textColor="@color/colorBlack" />
+
+
+    <RelativeLayout
+        android:layout_below="@+id/tv_comment_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/iv_giggle_black"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/field_giggles"
+            android:paddingTop="1dp"
+            app:srcCompat="@drawable/ic_smiley_evil" />
+
+        <TextView
+            android:id="@+id/tv_giggle_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_toEndOf="@+id/iv_giggle_black"
+            android:layout_toRightOf="@id/iv_giggle_black"
+            android:text="5" />
+
+
+        <ImageView
+            android:id="@+id/iv_reply"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_giggle_no"
+            android:layout_toEndOf="@+id/tv_giggle_no"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:contentDescription="@string/field_giggles"
+            android:paddingTop="1dp"
+            app:srcCompat="@drawable/ic_reply" />
+
+        <TextView
+            android:id="@+id/tv_reply_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_toEndOf="@+id/iv_reply"
+            android:layout_toRightOf="@id/iv_reply"
+            android:text="5" />
+
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

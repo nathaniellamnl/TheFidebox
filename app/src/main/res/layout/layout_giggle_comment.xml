@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/relLayout_giggle_comment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="50"
+        >
+
+    <RelativeLayout
+        android:id="@+id/relLayout_giggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@+id/iv_giggle_black"
+            android:layout_width="@dimen/icon_dimen"
+            android:layout_height="@dimen/icon_dimen"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_smiley_evil" />
+
+        <ImageView
+            android:id="@+id/iv_giggle_green"
+            android:layout_width="@dimen/icon_dimen"
+            android:layout_height="@dimen/icon_dimen"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_smiley_evil_green" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_giggle_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_toEndOf="@+id/relLayout_giggle"
+        android:layout_toRightOf="@+id/relLayout_giggle"
+        android:textColor="@color/colorBlack"
+        />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relLayout_comment"
+        android:layout_toRightOf="@+id/relLayout_giggle"
+        android:layout_toEndOf="@+id/relLayout_giggle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="50"
+        >
+
+    <ImageView
+        android:id="@+id/iv_comment"
+        android:layout_width="@dimen/icon_dimen"
+        android:layout_height="@dimen/icon_dimen"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/ic_chat_bubble" />
+
+    <TextView
+        android:id="@+id/tv_comment_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toEndOf="@+id/iv_comment"
+        android:layout_toRightOf="@+id/iv_comment"
+        android:text="5"
+        android:textColor="@color/colorBlack" />
+
+    </RelativeLayout>
+</merge>
